@@ -4,7 +4,7 @@ RUN useradd -ms /bin/bash jupyter && \
     mkdir /notebooks && \
     chown jupyter /notebooks
 
-RUN apt update && apt install libatlas-base-dev python3-pip
+RUN apt update && apt install -y libatlas-base-dev python3-pip
 RUN pip3 install jupyter matplotlib numpy
 
 USER jupyter
